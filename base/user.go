@@ -414,7 +414,7 @@ func (base *Base) InviteUser(params InviteUserParams) (respData *InviteUserResp,
 		return
 	}
 	if respData.ErrCode != 0 {
-		err = fmt.Errorf("UserIDToOpenID Error , errcode=%d , errmsg=%s", respData.ErrCode, respData.ErrMsg)
+		err = fmt.Errorf("InviteUser Error , errcode=%d , errmsg=%s", respData.ErrCode, respData.ErrMsg)
 		return
 	}
 
