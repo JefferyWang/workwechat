@@ -6,6 +6,7 @@ import (
 	"github.com/JefferyWang/workwechat/base"
 	"github.com/JefferyWang/workwechat/cache"
 	"github.com/JefferyWang/workwechat/context"
+	"github.com/JefferyWang/workwechat/media"
 )
 
 // WorkWechat struct
@@ -36,6 +37,11 @@ func copyConfigToContext(cfg *Config, context *context.Context) {
 }
 
 // GetBase 通讯录管理接口
-func (wwc *Wechat) GetBase() *base.Base {
+func (wwc *WorkWechat) GetBase() *base.Base {
 	return base.NewBase(wwc.Context)
+}
+
+// GetMedia 素材管理接口
+func (wwc *WorkWechat) GetMedia() *media.Media {
+	return media.NewMedia(wwc.Context)
 }
