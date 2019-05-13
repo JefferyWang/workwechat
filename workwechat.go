@@ -6,6 +6,7 @@ import (
 	"github.com/JefferyWang/workwechat/base"
 	"github.com/JefferyWang/workwechat/cache"
 	"github.com/JefferyWang/workwechat/context"
+	"github.com/JefferyWang/workwechat/crm"
 	"github.com/JefferyWang/workwechat/media"
 )
 
@@ -44,4 +45,9 @@ func (wwc *WorkWechat) GetBase() *base.Base {
 // GetMedia 素材管理接口
 func (wwc *WorkWechat) GetMedia() *media.Media {
 	return media.NewMedia(wwc.Context)
+}
+
+// GetCrm 外部联系人接口
+func (wwc *WorkWechat) GetCrm() *crm.Crm {
+	return crm.NewCrm(wwc.Context)
 }
